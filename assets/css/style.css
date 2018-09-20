@@ -1,0 +1,36 @@
+body {
+    background-image: url(../images/pokeballs2.png);
+    color: #dddddd;
+}
+
+.container {
+    background-color: #777777;
+    width: 80%;
+    height: 90%;
+    margin: 6% auto;
+    border-style: double;
+    border-color: #000000;
+    color: #dddddd;
+    text-align: center;
+}
+
+h1 {
+    color: #dddddd;
+    font-family: 'Bangers', cursive;
+}
+
+#encounters {
+    height: 90%;
+    width: 90%;
+    margin: 5% auto;
+}
+
+#wordguess {
+    min-height: 30%;
+    min-width: 100%;
+}
+
+#lettersguessed {
+    min-height: 50%;
+    min-width: 100%;
+}
