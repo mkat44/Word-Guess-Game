@@ -3,6 +3,7 @@ var score = 0;
 var HP = 10;
 var guessesRemaining = 8;
 var guessedLetters = [];                    //empty array for guessed letters
+var guessedWrongLetters = [];               //wrong letters go in here
 var pokeName = [];                          //name of chosen 'mon
 var gamePlay = false;                       //are we playing?
 var finisher = true;                        //is the game finished?
@@ -23,6 +24,7 @@ function startGame () {
     guessesRemaining = 8;
     gamePlay = true;
     chooseYou = pokemon[Math.floor(Math.random() * pokemon.length)];
+    guessedWrongLetters = [];
     guessedLetters = [];
     whosThatPokemon = [];
     document.getElementById("wordguess").textContent = "";
@@ -44,12 +46,12 @@ function updateDOM () {
     document.getElementById("triesremaining").textContent = guessesRemaining;
     document.getElementById("score").textContent = score;
     document.getElementById("wordguess").textContent = gameData;
-    document.getElementById("lettersguessed").textContent = guessedLetters;
+    document.getElementById("lettersguessed").textContent = guessedWrongLetters;
     if (holdUpChuck) {
-        document.getElementById("start/quit").textContent = "Press any key to restart the game!";
+        document.getElementById("startquit").textContent = "Press any key to restart the game!";
     }
     else {
-    document.getElementById("start/quit").textContent = "Press any key to continue playing!";
+    document.getElementById("startquit").textContent = "Press any key to continue playing!";
     }
     console.log("Everything is updated!")
 }
@@ -113,6 +115,7 @@ function evaluateGuesses(letter) {
     // if there are no indicies, remove a guess and update the hangman image
     if (letterPositions.length <= 0) {
         guessesRemaining--;
+        guessedWrongLetters.push(letter);
     } else {
         // Loop through all the indicies and replace the '_' with a letter.
         for(let k = 0; k < letterPositions.length; k++) {
