@@ -13,6 +13,8 @@ There are a few features I didn't have time to implement:
 * Pokécenter
     * On HP = 0, I intended to halt the game in order to send the player to the Pokémon Center. This would clear all fields and restart the game on key press. However, I ran out of time for this one, too.
 
-I'm very well aware that it is not coded in the cleanest or prettiest fashion, and it was certainly a challenge, but in the end I'm somewhat happy with the result.
+I'm very well aware that it is not coded in the cleanest or prettiest fashion, and it was certainly a challenge, but in the end I'm somewhat happy with the result. Needs a lot of help to look better, too.
 
 In the future I would love to finish what I've started, but for now, this'll do. :)
+
+https://mkat44.github.io/Word-Guess-Game/
